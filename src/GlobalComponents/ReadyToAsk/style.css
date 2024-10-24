@@ -1,0 +1,10 @@
+.readyToAsk{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 47px 50px;
+    margin: 0px 120px ;
+    border-radius: 46px;
+    background-color: rgba(2, 37, 50, 1);
+    margin-bottom: 60px;
+}

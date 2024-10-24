@@ -1,0 +1,66 @@
+.service-name-2{
+    display: flex;
+    width: 100%;
+    padding: 130px 108px;
+    justify-content: space-between;  
+    overflow: hidden;
+    gap: 20px;
+}
+
+
+.service-poster{
+    display: flex;
+    align-items: center;
+    /* justify-content: start; */
+    width: 50%;
+    height: auto;
+
+}
+
+.service-poster-borders{
+    display: flex;
+    position: relative;
+    border: 1px solid var(--border-color);
+    height: 380px;
+    width: 380px;
+}
+
+.service-poster-borders img{
+    position: absolute;
+    top: -40px;
+    right: -60px;
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+.content_section{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+   
+  
+}
+
+.service-poster-2{
+    width: 50%;
+    height: 435px;
+    background-color: var(--border-color);
+    position: relative;
+    background-image: url("../../Assets/services/documentaries.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 12px;
+}
+
+.content_section p {
+    font-size: 20px;
+    margin: 0;
+    padding: 20px 20px;
+    color: white;
+    font-weight: 400 !important;
+    line-height: 30px;
+}

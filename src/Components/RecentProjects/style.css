@@ -1,0 +1,13 @@
+.recentProjectsInnerSlider{
+    height: 460px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: transparent;
+    position: relative;
+}
+
+.recentProjectsInnerSlider img{
+    position: absolute;
+    right: 3%;
+    top: 3%;
+}

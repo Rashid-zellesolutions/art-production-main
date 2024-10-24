@@ -1,0 +1,84 @@
+.navbar-main-container{
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding: 25px 30px;
+}
+
+.navbar-inner-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: #022532; */
+     background: rgba(2, 37, 54, 0.2);
+    width: 100%;
+    height: auto;
+    padding: 12px 30px;
+    border-radius: 38px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(25px)
+
+}
+
+/* Nav Logo */
+.navbar-logo-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+}
+
+.navbar-logo-section img{
+    width: auto;
+    height: 52px;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+/* Navbar Links */
+
+.navbar-links-section{
+    display: flex;
+    width: auto;
+    gap: 58px;
+    align-items: center;
+}
+
+.navbar-link-anchor{
+    color: #fff;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 400;
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar-link-anchor.navbar-link-active-anchor{
+    color: var(--secondry-text-color);
+    border-bottom: 3px solid var(--border-color);
+}
+
+/* Navbar button section */
+.navbar-contact-btn-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+}
+
+.navbar-contact-btn-section button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-color);
+    background: linear-gradient(270.29deg, rgba(156, 202, 219, 0.24) 0.24%, rgba(2, 37, 50, 0.24) 99.76%);
+    width: 173px;
+    height: 52px;
+    border-radius: 31px;
+    color: #fff;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    cursor: pointer;
+}

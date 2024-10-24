@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root{
+  --border-color: #57AEED;
+  --hover-color: #57AEED;
+  --font-family: "Outfit", sans-serif;
+  --secondry-text-color: #57AEED;
+  --section-bg: #05151d;
+  --section-bg-two: #0C273380;
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #01141D;
+  font-family: "Outfit", sans-serif;
+}

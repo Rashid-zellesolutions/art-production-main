@@ -1,0 +1,40 @@
+.mainSection_worked{
+    display: flex;
+    width: 100%;
+    background-color: #01141D;
+
+}
+
+.leftSection_worked{
+    width: 30%;
+    height: 100px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+}
+.rightSection_worked{
+    width: 70%;
+    height: 100px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0 20px;
+    box-sizing: border-box;
+}
+
+.worked_companies{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+}
+
+.worked_companies img{
+    width: 160px;
+    height: auto;
+}

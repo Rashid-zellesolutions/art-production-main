@@ -1,0 +1,20 @@
+.main-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-color);
+    border-radius: 31px;
+    cursor: pointer;
+    /* color: #fff;
+    font-size: 17px;
+    line-height: 25px;
+    font-weight: 600; */
+    background: linear-gradient(270.29deg, rgba(156, 202, 219, 0.24) 0.24%, rgba(2, 37, 50, 0.24) 99.76%);
+    gap: 10px;
+    /* padding: 0 20px; */
+}
+
+.main-button img{
+    height: 30px;
+    width: auto;
+}

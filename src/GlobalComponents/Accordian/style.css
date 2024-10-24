@@ -1,0 +1,41 @@
+.accordian{
+    border: 1px solid #57AEE0;
+    /* padding: 10px; */
+    width: 60%;
+    height: 73px;
+    border-radius: 18px;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    transition: height 0.3s ease;
+    background-color: rgba(14, 35, 45, 0.77);
+}
+
+.arrow img{
+    position: absolute;
+    right: 6px;
+    transition: transform 0.3s ease;
+}
+
+.arrow.rotate img{
+    transform: rotate(-180deg);
+}
+
+.accordian.rotate {
+    height: auto;
+}
+
+.accordian > .question{
+    font-size: 23px;
+    padding: 23px 23px 25px 23px;
+    margin: 0;
+    color: #fff;
+}
+
+.accordian > .answer{
+    font-size: 18px;
+    padding: 0 23px 23px 23px;
+    margin: 0;
+    color: #fff;
+    font-weight: 500;
+}

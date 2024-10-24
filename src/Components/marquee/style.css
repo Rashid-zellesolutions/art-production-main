@@ -1,0 +1,53 @@
+/* .marquee1{
+    height: 300px;
+    width: 100%;
+    background-color: red;
+    transform: perspective(1200px) rotate(-5deg) rotateX(5deg) rotateY(40deg);
+} */
+
+.marquee1{
+    height: 650px;
+    flex: none;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+}
+
+.slider_marquee{
+    transform: perspective(1200px) rotate(-5deg) rotateX(5deg) rotateY(40deg);
+    opacity: 1;
+    position: absolute;
+    /* height: 372px; */
+    right: -300px;
+    top: calc(49.86595174262737% - 372px / 2);
+    width: 100%;
+    /* background-color: blue; */
+    display: flex;
+    gap: 20px;
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%);
+}
+
+
+
+.video_frame{
+    height: 240px;
+    width: 240px;
+    background-color: red;
+    border-radius: 20px;
+    flex-basis: auto;
+    box-sizing: border-box;
+    flex:0 0 auto;
+    animation: slide 20s linear infinite; 
+    overflow: hidden;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}

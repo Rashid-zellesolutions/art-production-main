@@ -1,0 +1,123 @@
+/* 
+
+.main{
+    display: flex;
+    width: 100%;
+    height: 600px;
+    padding: 50px;
+    background-color: green;
+}
+
+
+.swiper-container {
+	width: 80%;
+	height: 40;
+	margin-left: auto;
+	margin-right: auto;
+}
+.swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+	height: 100%;
+	color: #000;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+	transition: 0.3s all;
+	box-shadow: 0 0 20px #00000036;
+	border-radius: 10px;
+}
+
+.swiper-slide:not(.swiper-slide-prev):not(.swiper-slide-active):not(.swiper-slide-next) {
+	opacity: 0;
+}
+
+.swiper-slide-prev, 
+.swiper-slide-next {
+	opacity: 0.3;
+}
+
+.swiper-slide-active {
+	transition: 0.3s all;
+	opacity: 1;
+	background-color: orange;
+    width: 800px !important;
+} */
+
+
+/* Main container for the slider */
+.main {
+    display: flex;
+    width: 100%;
+    height: 600px; /* Height for the slider area */
+    padding: 50px;
+    background-color: green;
+    justify-content: center; /* Center the slider within the main */
+    align-items: center;
+}
+
+/* Swiper container styles */
+.swiper-container {
+    width: 60%;
+    height: 300px; /* Full height of the main container */
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: center;
+    background-color: purple;
+    padding: 20px;
+}
+
+.slide{
+    height: 300px !important;
+}
+
+/* .swiper-wrapper{
+    transform: translate3d(800px, 0px, 0px) !important;
+} */
+
+/* Individual slide styles */
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    height: 100%; /* Set to fill the height of the container */
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s all;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+
+/* Visibility control for slides */
+.swiper-slide:not(.swiper-slide-prev):not(.swiper-slide-active):not(.swiper-slide-next) {
+    opacity: 0; /* Hide non-adjacent slides */
+}
+
+.swiper-slide-prev, 
+.swiper-slide-next {
+    opacity: 0.3; /* Lower opacity for adjacent slides */
+}
+
+/* Active slide styles */
+.swiper-slide-active {
+    transition: 0.3s all;
+    opacity: 1; /* Full opacity for the active slide */
+    background-color: orange; /* Highlight color for the active slide */
+    z-index: 10; /* Ensure it appears on top */
+}
+
+/* Styles for non-active slides */

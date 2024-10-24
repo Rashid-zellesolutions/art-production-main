@@ -1,0 +1,51 @@
+.single-project{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.single-project-image{
+    position: relative;
+    width: auto;
+}
+
+.single-project-image img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.single-project-tag{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 3px 15px;
+    cursor: pointer;
+}
+
+.single-project-tag p{
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 400;
+
+}
+
+.chanel-name{
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 400;
+}
+
+.project-title{
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 500;
+    color: #fff;
+}
