@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './Navbar.css';
 import logo from '../../Assets/logos/logo.png'
 import PrimeryButton from '../../ControlledComponents/PrimeryButton/PrimeryButton';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 
 const Navbar = () => {
@@ -14,15 +14,23 @@ const Navbar = () => {
         {name: 'Portfolio', link: '/our-projects'},
         {name: 'Services', link: '/services'},
     ]
+    const location = useLocation()
     const navigate = useNavigate()
     const navigateToContact = () => {
         navigate(`/contact-us`)
     }
+    useEffect(() => {
+        const currentIndex = navLinks.findIndex(item => item.link === location.pathname);
+        setIsActive(currentIndex !== -1 ? currentIndex : 0); // Default to first item if not found
+    }, [location.pathname]); // Runs every time the pathname changes
+
   return (
     <div className='navbar-main-container'>
         <div className='navbar-inner-container'>
             <div className='navbar-logo-section'>
-                <img src={logo} alt='logo' />
+                <a href='/'>
+                    <img src={logo} alt='logo' />
+                </a>
             </div>
             <div className='navbar-links-section'>
                 {navLinks.map((items, index) => (
