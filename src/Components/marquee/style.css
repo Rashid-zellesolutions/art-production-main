@@ -51,3 +51,26 @@
         transform: translateX(-100%);
     }
 }
+
+@media only screen and (max-width: 480px){
+    .marquee1 {
+        height: 300px;
+    }
+    .slider_marquee{
+        transform: perspective(1400px) rotate(-5deg) rotateX(5deg) rotateY(40deg);
+        opacity: 1;
+        position: absolute;
+        /* height: 372px; */
+        right: 0px;
+        top: calc(40.865952% - 100px / 2);
+        width: 100%;
+        /* background-color: blue; */
+        display: flex;
+        gap: 20px;
+        mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%);
+    }
+    .video_frame{
+        height: 180px;
+        width: 180px;
+    }
+}

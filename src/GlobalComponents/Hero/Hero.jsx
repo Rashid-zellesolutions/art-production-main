@@ -13,6 +13,7 @@ const Hero = ({welcomText, mainHeading, heroDesc}) => {
             allowFullScreen
             title="Vimeo Video"
         ></iframe>
+        
         <div className="hero-overlay">
             <Navbar />
             <div className='hero-overlay-text'>

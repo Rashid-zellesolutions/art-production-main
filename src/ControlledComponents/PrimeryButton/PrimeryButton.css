@@ -18,3 +18,17 @@
     height: 30px;
     width: auto;
 }
+
+@media only screen and (max-width: 480px){
+    .main-button{
+        font-size: 14px !important;
+        line-height: 18px !important;
+        font-weight: 400 !important;
+        width: 150px !important;
+        height: 40px !important;
+    }
+    .main-button img{
+        height: 14px;
+        width: auto;
+    }
+}

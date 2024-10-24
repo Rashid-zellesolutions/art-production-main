@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './Navbar.css';
 import logo from '../../Assets/logos/logo.png'
+import humbergerIcon from '../../Assets/icons/humberger-icon.png';
 import PrimeryButton from '../../ControlledComponents/PrimeryButton/PrimeryButton';
 import { useNavigate, useLocation } from 'react-router-dom';
 
@@ -55,6 +56,10 @@ const Navbar = () => {
                     navigateClick={navigateToContact}
                 />
             </div>
+        </div>
+        <div className='mobile-navbar-inner-container'>
+            <img src={logo} alt='main logo' className='mobile-main-logo' />
+            <img src={humbergerIcon} alt='nav-toggle' className='mobile-humberger-icon' />
         </div>
     </div>
   )

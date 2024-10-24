@@ -82,3 +82,42 @@
     line-height: 22px;
     cursor: pointer;
 }
+
+
+/* Mobile navbar styling */
+.mobile-navbar-inner-container{
+    display: none;
+    overflow: hidden;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+     background: rgba(2, 37, 54, 0.2);
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 38px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(25px)
+}
+
+.mobile-main-logo{
+    width: auto;
+    height: 32px;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.mobile-humberger-icon{
+    width: auto;
+    height: 24px;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 480px){
+    .navbar-inner-container{
+        display: none;
+    }
+    .mobile-navbar-inner-container{
+        display: flex;
+    }
+}

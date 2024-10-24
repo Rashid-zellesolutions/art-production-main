@@ -32,3 +32,21 @@
     filter: grayscale(0);
     opacity: 1; 
 }
+
+@media only screen and (max-width: 480px){
+    .shortDescription {
+        color: #fff;
+        font-size: 12px;
+        font-weight: 500;
+        text-align: center;
+        line-height: 18px;
+        margin-bottom: 20px;
+    }
+    .our_partners_logos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+        /* width: 80%; */
+        margin: 0 auto;
+    }
+}

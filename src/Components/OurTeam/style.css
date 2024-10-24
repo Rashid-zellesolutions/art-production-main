@@ -57,3 +57,30 @@
     width: auto;
     border-radius: 100%;
 }
+
+@media only screen and (max-width: 480px){
+    .our_team{
+        padding: 20px 0;
+    }
+    .team_members {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 25px;
+    }
+    .team_member_img {
+        height: 187px;
+        width: 187px;
+    }
+    .team_member_img img {
+        height: 187px;
+        width: auto;
+        border-radius: 100%;
+    }
+    .team_member h3 {
+        font-size: 15px;
+        line-height: 22px;
+        font-weight: 700;
+    }
+}

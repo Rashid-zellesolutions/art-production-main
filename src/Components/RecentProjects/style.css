@@ -11,3 +11,25 @@
     right: 3%;
     top: 3%;
 }
+
+@media only screen and (max-width: 480px){
+    .mySlider{
+        height: auto;
+        padding: 20px 30px;
+    }
+    .mainHeading {
+        font-size: 22px;
+        line-height: 31px;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 18px;
+    }
+    .recentProjectsInnerSlider{
+        height: 180px;
+    }
+    .recentProjectsInnerSlider img {
+        width: auto !important;
+        height: 40px !important;
+        object-fit: contain !important;
+    }
+}

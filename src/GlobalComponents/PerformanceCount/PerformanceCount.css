@@ -48,3 +48,23 @@
     font-weight: 400;
     color: #fff;
 }
+
+/* Mobile styling start */
+@media only screen and (max-width: 480px){
+    .performance-count-main-section{
+        padding: 20px 15px;
+    }
+    .performance-count-inner{
+        height: 55px;
+        align-items: center;
+        justify-content: center;
+        padding: 0 30px;
+    }
+    .performance-count-containt h3 {
+        font-size: 20px;
+        line-height: 28px;
+    }
+    .performance-count-containt p {
+        font-size: 10px;
+    }
+}
