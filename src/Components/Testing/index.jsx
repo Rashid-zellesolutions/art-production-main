@@ -7,8 +7,8 @@ import bgImgStories from "../../Assets/stories/stories-section-bg.png"
 import './style.css';
 import MainHeading from '../../GlobalComponents/Utils/mainHeading';
 import alJazeeraLogo from '../../Assets/logos/aljazeera.png';
-import arrowLeft from '../../Assets/icons/arrow-left-white.png';
-import arrowRight from '../../Assets/icons/arrow-white-right.png';
+// import arrowLeft from '../../Assets/icons/arrow-left-white.png';
+// import arrowRight from '../../Assets/icons/arrow-white-right.png';
 import { MdArrowForwardIos  } from "react-icons/md";
 import { MdArrowBackIos  } from "react-icons/md";
 

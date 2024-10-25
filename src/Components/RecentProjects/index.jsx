@@ -4,14 +4,14 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import bgImgStories from "../../Assets/stories/stories-section-bg.png"
+// import bgImgStories from "../../Assets/stories/stories-section-bg.png"
 import './style.css';
 import MainHeading from '../../GlobalComponents/Utils/mainHeading';
 import alJazeeraLogo from '../../Assets/logos/aljazeera.png';
-import arrowLeft from '../../Assets/icons/arrow-left-white.png';
-import arrowRight from '../../Assets/icons/arrow-white-right.png';
-import { MdArrowForwardIos } from "react-icons/md";
-import { MdArrowBackIos } from "react-icons/md";
+// import arrowLeft from '../../Assets/icons/arrow-left-white.png';
+// import arrowRight from '../../Assets/icons/arrow-white-right.png';
+// import { MdArrowForwardIos } from "react-icons/md";
+// import { MdArrowBackIos } from "react-icons/md";
 import img1 from "../../Assets/recent-projects/img1.jpg";
 import img2 from "../../Assets/recent-projects/img2.jpg";
 import img3 from "../../Assets/recent-projects/img3.jpg";
@@ -26,14 +26,14 @@ export default function RecentProjects() {
     const swiperRef = useRef(null); // Create a ref to access Swiper instance
 
     // Custom navigation functions
-    const handleNext = () => {
-        swiperRef.current.swiper.slideNext(); // Go to the next slide
-    };
+    // const handleNext = () => {
+    //     swiperRef.current.swiper.slideNext(); // Go to the next slide
+    // };
 
-    const handlePrev = () => {
-        console.log("working")
-        swiperRef.current.swiper.slidePrev(); // Go to the previous slide
-    };
+    // const handlePrev = () => {
+    //     console.log("working")
+    //     swiperRef.current.swiper.slidePrev(); // Go to the previous slide
+    // };
     const storiesData = [
         {
             logo: alJazeeraLogo, 

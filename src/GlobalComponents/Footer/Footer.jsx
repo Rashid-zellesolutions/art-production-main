@@ -5,7 +5,7 @@ import PrimeryButton from '../../ControlledComponents/PrimeryButton/PrimeryButto
 import InputField from '../../ControlledComponents/InputField/InputField';
 import { FaFacebookF } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa6";
-import { FaTwitter } from "react-icons/fa";
+// import { FaTwitter } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { FaVimeoV } from "react-icons/fa";
@@ -98,9 +98,9 @@ const Footer = () => {
                     <div className='footer-get-in-touch'>
                         <h3>Get in touch</h3>
                         <div className='footer-contact-details'>
-                            <a>+1 (724) 246-4538</a>
-                            <a>info@artproduction.net</a>
-                            <a>Location, Address, United <br />
+                            <a href='#'>+1 (724) 246-4538</a>
+                            <a href='#'>info@artproduction.net</a>
+                            <a href=''>Location, Address, United <br />
                                 Arab Emirates
                             </a>
                             <p className='footer-follow'>Follow Us</p>

@@ -1,6 +1,6 @@
-import React , {useState, useEffect} from 'react'
+import React , {useState} from 'react'
 import './ServiceCard.css';
-import documentaryImage from '../../Assets/services/documentaries.png'
+// import documentaryImage from '../../Assets/services/documentaries.png'
 // import aos from 'aos';
 
 const ServiceCard = ({backgroundColor, ind, projectDone, slideSection, justifyContent, padding, flexDirection, serviceBanner, serviceHeading, serviceHeadingTwo, paraOne, paraTwo}) => {
@@ -18,7 +18,7 @@ const ServiceCard = ({backgroundColor, ind, projectDone, slideSection, justifyCo
     >
         <div className='service-poster' style={{justifyContent: justifyContent, padding: padding}}>
             <div className={`service-poster-borders-1 ${ind === 0 || ind === 1 ? 'round-borders' : ''}`} onMouseEnter={handleOveerlayShow} onMouseLeave={handleOverlayHidden}>
-                <img /* onMouseEnter={handleOveerlayShow} onMouseLeave={handleOverlayHidden} */ src={serviceBanner} alt='documentary image'  />
+                <img /* onMouseEnter={handleOveerlayShow} onMouseLeave={handleOverlayHidden} */ src={serviceBanner} alt='documentary'  />
                 <div className={`service-card-image-overlay ${ind === 0 || ind === 1 ? 'round-overlay' : '' } ${showOverlay ? 'show-overlay' : ''}`}>
                 <div className={`flesh-container ${showOverlay ? 'slide-flash' : ''}`}></div>
                     <p className={`service-overlay-head ${showOverlay ? 'transit-overlay-head' : ''}`}>We Have Completed</p>

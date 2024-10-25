@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import './About.css';
 import PerformanceCount from '../../GlobalComponents/PerformanceCount/PerformanceCount';
-import ServiceCard from '../../Components/ServiceCard/ServiceCard';
-import documentaryImage from '../../Assets/services/documentaries.png';
+// import ServiceCard from '../../Components/ServiceCard/ServiceCard';
+// import documentaryImage from '../../Assets/services/documentaries.png';
 import ServiceCard2 from '../../Components/ServiceCard2';
 import WorkedWith from '../../Components/workedWith';
 import MainHeading from '../../GlobalComponents/Utils/mainHeading';
@@ -14,18 +14,18 @@ import FAQs from '../../GlobalComponents/FAQs';
 import ReadyToAsk from '../../GlobalComponents/ReadyToAsk/ReadyToAsk';
 
 const About = () => {
-  const servicesData = [
-    {bgColor: 'var(--section-bg-two)',slide: 'slide-left', padding: '0 120px 0 0', contentJustify: 'end', flexDir: 'row-reverse', serviceName: 'Markeeting', img: documentaryImage, paraOne: `Documentaries have the power to educate. Documentary films are an 
-      in-depth and informative resource that is a perfect platform to create dialogue. 
-      They serve as powerful tools for bringing the important topics to the table in a 
-      captivating way that also sparks conversation, and sometimes even social movements`,
-  paraTwo: `We prepare the idea and edit the script, we walk you through each step to ensure 
-      the result you are looking for. we scout for shooting sets, we look for the best 
-      guests, crew, and equipment. During the post-production phase, we take care of every 
-      detail like video editing and color grading until the film is published, we market 
-      the film on all different platforms on the internet`
-  },
-  ]
+  // const servicesData = [
+  //   {bgColor: 'var(--section-bg-two)',slide: 'slide-left', padding: '0 120px 0 0', contentJustify: 'end', flexDir: 'row-reverse', serviceName: 'Markeeting', img: documentaryImage, paraOne: `Documentaries have the power to educate. Documentary films are an 
+  //     in-depth and informative resource that is a perfect platform to create dialogue. 
+  //     They serve as powerful tools for bringing the important topics to the table in a 
+  //     captivating way that also sparks conversation, and sometimes even social movements`,
+  // paraTwo: `We prepare the idea and edit the script, we walk you through each step to ensure 
+  //     the result you are looking for. we scout for shooting sets, we look for the best 
+  //     guests, crew, and equipment. During the post-production phase, we take care of every 
+  //     detail like video editing and color grading until the film is published, we market 
+  //     the film on all different platforms on the internet`
+  // },
+  // ]
   const [introHovered, setIntroHoverd] = useState(null);
   const handleIntroHoverTrue = (n) => {
     setIntroHoverd(n);

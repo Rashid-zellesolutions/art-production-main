@@ -25,7 +25,7 @@ export default function OurPartners() {
             <ShortDescription content={"We’ve had the privilege of partnering with top global brands and television channels, delivering impactful stories that resonate. From documentaries to commercials, our work speaks for itself."} />
             <div className="our_partners_logos">
                 {images.map((image, index) => (
-                    <img key={index} src={image} alt={`Image ${index + 1}`} />
+                    <img key={index} src={image} alt={`ind ${index + 1}`} />
                 ))}
             </div>
         </div>

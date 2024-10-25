@@ -7,7 +7,7 @@ import commercialImage from '../../Assets/services-images/man-woman-looking-clip
 import eventManagmentImage from '../../Assets/services-images/man-making-music-bedroom-front-view.png'
 import shortFilmImage from '../../Assets/services-images/man-filming-with-professional-camera.png'
 import markeetingImage from '../../Assets/services-images/tech-vlogger.png'
-import Button from '../../ControlledComponents/PrimeryButton/PrimeryButton';
+// import Button from '../../ControlledComponents/PrimeryButton/PrimeryButton';
 import PrimeryButton from '../../ControlledComponents/PrimeryButton/PrimeryButton';
 
 const OurServices = () => {
