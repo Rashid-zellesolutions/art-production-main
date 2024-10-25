@@ -39,9 +39,13 @@ const About = () => {
       <PerformanceCount/>
       <ServiceCard2/>
       <WorkedWith/>
-      <div className='intro_content' style={{
-        display:"flex"
-      }}>
+      <div 
+        className='intro_content' 
+        style={{
+          display:"flex"
+        }}
+        data-aos={'slide-right'}
+      >
         <div style={{
           display:"flex",
           flexDirection:"column",
@@ -75,9 +79,13 @@ const About = () => {
 
 
 
-      <div className='intro_content' style={{
-        display:"flex"
-      }}>
+      <div 
+        className='intro_content' 
+        style={{
+          display:"flex"
+        }}
+        data-aos={'slide-left'}
+      >
         
         <div style={{
           display:"flex",

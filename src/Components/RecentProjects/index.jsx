@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 // import {autoplay} from 'swiper/modules';
 import 'swiper/css';
@@ -62,12 +62,58 @@ export default function RecentProjects() {
             name: 'Abdo Madkhana', 
             position: 'MANAGER AL JAZEERA'
         },
+        {
+            logo: alJazeeraLogo, 
+            bg:img1,
+            post: `The teams that worked on our projects on location and in 
+                premise have been very professional and flexible and we always get exactly what 
+                we are looking for, if not more`,
+            name: 'Abdo Madkhana', 
+            position: 'MANAGER AL JAZEERA'
+        },
+        // {
+        //     logo: alJazeeraLogo, 
+        //     bg:img3,
+        //     post: `The teams that worked on our projects on location and in 
+        //         premise have been very professional and flexible and we always get exactly what 
+        //         we are looking for, if not more`,
+        //     name: 'Abdo Madkhana', 
+        //     position: 'MANAGER AL JAZEERA'
+        // },
+        // {
+        //     logo: alJazeeraLogo, 
+        //     bg:img2,
+        //     post: `The teams that worked on our projects on location and in 
+        //         premise have been very professional and flexible and we always get exactly what 
+        //         we are looking for, if not more`,
+        //     name: 'Abdo Madkhana', 
+        //     position: 'MANAGER AL JAZEERA'
+        // },
     ]
+
+
+    // Custom navigation functions
+    const handleNext = () => {
+        swiperRef.current.swiper.slideNext(); // Go to the next slide
+    };
+
+    const handlePrev = () => {
+        console.log("working")
+        swiperRef.current.swiper.slidePrev(); // Go to the previous slide
+    };
+    // useEffect(() => {
+    //     const timer = setInterval(() => {
+    //         handleNext();
+    //     }, 3000); // Change slide every 3 seconds
+
+    //     return () => clearInterval(timer); // Clear timer on unmount
+    // }, []);
     // const swiper = new Swiper(".swiper", {
     //     Autoplay: {
     //         delay: 3000,
     //     }
-    // })
+    // }
+    // )
 
     return (
         <div style={{
@@ -78,16 +124,16 @@ export default function RecentProjects() {
             </div> */}
             <Swiper
                 ref={swiperRef} // Assign the ref to Swiper
-                spaceBetween={20} // Space between the slides
-                slidesPerView={1.5}
+                spaceBetween={5} // Space between the slides
+                slidesPerView={1.6} // Show 1 full slide and part of the next and previous ones
+                initialSlide={1}
+                loop={true}
                 centeredSlides={true} // Center the active slide
                 pagination={{
                     clickable: true,
                 }}
-                loop={true}
                 autoplay={{
-                    delay: 3000,
-                    disableOnInteraction: false
+                    delay: 3000
                 }}
                 modules={[Pagination, Autoplay]} // Only use Pagination here since we're using custom buttons
                 className="mySwiper2"

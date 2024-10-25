@@ -73,6 +73,8 @@ export default function SwiperSlider() {
                 ref={swiperRef} // Assign the ref to Swiper
                 spaceBetween={5} // Space between the slides
                 slidesPerView={1.6} // Show 1 full slide and part of the next and previous ones
+                initialSlide={1}
+                loop={true}
                 centeredSlides={true} // Center the active slide
                 pagination={{
                     clickable: true,
