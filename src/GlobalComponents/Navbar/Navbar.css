@@ -114,6 +114,9 @@
 }
 
 @media only screen and (max-width: 480px){
+    .navbar-main-container{
+        padding: 20px 30px;
+    }
     .navbar-inner-container{
         display: none;
     }
