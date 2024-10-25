@@ -13,3 +13,52 @@
     justify-content: center;
     gap: 12px;
 }
+
+@media only screen and (max-width: 480px){
+    .FAQs_section {
+        padding: 20px 30px;
+    }
+
+    .mainHeading{
+        display: flex;
+        flex-direction: column;
+        width: 95% !important;
+        align-items: center;
+        justify-content: center;
+    }
+    .FAQs{
+        gap: 10px !important;
+    }
+    .accordian {
+        width: 100% !important;
+        height: 38px !important;
+    }
+    .accordian.rotate{
+        height: auto !important;
+    }
+    .accordian > .question {
+        font-size: 16px !important;
+        line-height: 24px !important;
+        padding: 0px !important;
+        margin: 0 !important;
+        color: #fff !important;
+        padding: 5px 10px !important;
+    }
+    .arrow img {
+        position: absolute;
+        right: 10px;
+        top: 3px;
+        width: auto;
+        height: 30px;
+        transition: transform 0.3s ease;
+        cursor: pointer;
+    }
+    .accordian > .answer {
+        font-size: 16px !important;
+        line-height: 24px !important;
+        padding: 10px !important;
+        margin: 0 !important;
+        color: #fff;
+        font-weight: 500;
+    }
+}

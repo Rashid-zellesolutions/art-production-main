@@ -230,3 +230,237 @@
     display: flex;
     gap: 10px;
 }
+
+.mobile-footer{
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 20px 30px;
+    gap: 30px;
+}
+
+.mobile-footer-company-nameand-logo{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+}
+
+.mobile-footer-company-nameand-logo img{
+    width: auto;
+    height: 65px;
+    object-fit: contain;
+}
+
+.footer-web-name{
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    align-items: start;
+    justify-content: start;
+}
+
+.footer-web-name h3{
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.mobile-footer-follow-us{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+.mobile-footer-follow-us h3{
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 700;
+    color: #57AEE0;
+}
+
+.mobile-footer-help-and-get-in-touch-section{
+    display: flex;
+    width: 100%;
+    gap: 30px;
+}
+
+.footer-help-sec-nav{
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+}
+
+.footer-hel-sec-nav-items{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: start;
+    justify-content: start;
+    gap: 20px;
+}
+
+.footer-hel-sec-nav-items h3{
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 500;
+    color: #fff;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+}
+
+.footer-hel-sec-nav-items h3::after{
+    content: "";
+    position: absolute;
+    right: -4px;
+    bottom: -2px;
+    width: 2px;
+    height: 2px;
+    transform: rotate(45deg);
+    border: 1px solid var(--border-color);
+}
+
+.footer-nav{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: start;
+    justify-content: start;
+    gap: 8px;
+}
+
+.footer-nav a{
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+}
+
+.mobile-footer-get-in-touch{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.mobile-footer-get-in-touch h3{
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 500;
+    color: #fff;
+    width: max-content;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+}
+
+.mobile-footer-get-in-touch h3::after{
+    content: "";
+    position: absolute;
+    right: -4px;
+    bottom: -2px;
+    width: 2px;
+    height: 2px;
+    transform: rotate(45deg);
+    border: 1px solid var(--border-color);
+}
+
+.mobile-footer-get-in-touch-items{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.mobile-footer-get-in-touch-items a{
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+}
+
+.mobile-footer-newsletter-and-rights{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+.mobile-footer-newsletter-and-rights h3{
+    font-size: 13px;
+    line-height: 17px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.mobile-footer-newsletter-and-rights h3 span{
+    color: #57AEE0;
+}
+
+.mobile-footer-inputs{
+    display: flex;
+    width: 100%;
+    gap: 18px;
+}
+
+.mobile-footer-inputs input{
+    width: 115px;
+    /* height: 25px; */
+    font-size: 8px !important;
+    line-height: 15px !important;
+    padding: 8px 10px !important;
+    font-weight: 500;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    border: 1px solid var(--border-color);
+    border-radius: 2px;
+    outline: none;
+}
+
+.mobile-footer-inputs button{
+    color: #fff;
+    border: 1px solid var(--border-color);
+    width: 60px;
+    height: auto;
+    font-size: 10px;
+    line-height: 15px;
+    font-weight: 500;
+    padding: 8px 10px;
+    border-radius: 25px;
+    cursor: pointer;
+    background: linear-gradient(270.29deg, rgba(156, 202, 219, 0.24) 0.24%, rgba(2, 37, 50, 0.24) 99.76%);
+}
+
+.mobile-footer-copy-rights{
+    font-size: 10px;
+    line-height: 15px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.mobile-footer-policy{
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+
+.mobile-footer-policy p{
+    color: #fff;
+    font-size: 10px;
+    line-height: 15px;
+    font-weight: 400;
+}
+
+@media only screen and (max-width: 480px){
+    .footer-main-container{
+        display: none;
+    }
+    .mobile-footer{
+        display: flex;
+    }
+}

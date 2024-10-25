@@ -25,8 +25,9 @@
 
 @media only screen and (max-width: 480px){
     .mySlider{
-        height: auto;
+        height: 300px;
         padding: 20px 30px;
+
     }
     .mainHeading {
         font-size: 22px;
