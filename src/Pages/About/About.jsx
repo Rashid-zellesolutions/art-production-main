@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './About.css';
 import PerformanceCount from '../../GlobalComponents/PerformanceCount/PerformanceCount';
 import ServiceCard from '../../Components/ServiceCard/ServiceCard';
@@ -26,6 +26,13 @@ const About = () => {
       the film on all different platforms on the internet`
   },
   ]
+  const [introHovered, setIntroHoverd] = useState(null);
+  const handleIntroHoverTrue = (n) => {
+    setIntroHoverd(n);
+  }
+  const handleIntroHoverFalse = () => {
+    setIntroHoverd(null);
+  }
   return (
   
     <div className='about-us-main'>
@@ -52,8 +59,16 @@ const About = () => {
           alignItems:"center",
           justifyContent:"flex-start",
           flex:"1"
-        }} className='intro_content_right'>
+        }} className='intro_content_right'
+          onMouseEnter={() => handleIntroHoverTrue(1)}
+          onMouseLeave={handleIntroHoverFalse}  
+        >
           <img src={image1} alt="" />
+          <div className={`intro-content-overlay ${introHovered === 1 ? 'show-intro-overlay' : ''}`}>
+            <div className={`flesh-container ${introHovered ? 'slide-flash' : ''}`}></div>
+              <h3 className={`intro-overlay-hours ${introHovered ? 'show-intro-hover-hours' :''}`}>17+</h3>
+              <p className={`intro-overlay-hover-text ${introHovered ? 'show-intro-overlay-text' : ''}`}>Years of Exeriance</p>
+          </div>
         </div>
 
       </div>
@@ -70,8 +85,17 @@ const About = () => {
           alignItems:"center",
           justifyContent:"flex-start",
           flex:"1"
-        }} className='intro_content_right'>
+        }} 
+        className='intro_content_right'
+        onMouseEnter={() =>handleIntroHoverTrue(2)}
+        onMouseLeave={handleIntroHoverFalse}
+      >
           <img src={image1} alt="" />
+          <div className={`intro-content-overlay ${introHovered === 2 ? 'show-intro-overlay' : ''}`}>
+            <div className={`flesh-container ${introHovered ? 'slide-flash' : ''}`}></div>
+              <h3 className={`intro-overlay-hours ${introHovered ? 'show-intro-hover-hours' :''}`}>30772+</h3>
+              <p className={`intro-overlay-hover-text ${introHovered ? 'show-intro-overlay-text' : ''}`}>Work Hours Completed</p>
+          </div>
         </div>
 
         <div style={{

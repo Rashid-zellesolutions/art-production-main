@@ -16,12 +16,17 @@
 
 }
 
-.service-poster-borders{
+.service-poster-borders-1{
     display: flex;
     position: relative;
     border: 1px solid var(--border-color);
     height: 380px;
     width: 380px;
+    /* background-color: #fff; */
+    /* background: #01141D; */
+    background: #0C273380;
+
+
 }
 
 .service-card-image-overlay{
@@ -29,17 +34,23 @@
     flex-direction: column;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.9);
     align-items: center;
     justify-content: center;
     z-index: 99999;
-    top: -40px;
-    right: -60px;
+    top: -10px;
+    right: -10px;
     overflow: hidden;
     position: absolute;
     visibility: hidden;
     opacity: 0;
     transition: all 0.3s ease;
+}
+
+.service-card-image-overlay.round-overlay{
+    border-radius: 10px;
+    top: 0;
+    right: 0;
 }
 
 /* .service-card-image-overlay{
@@ -49,7 +60,28 @@
 
 .service-card-image-overlay.show-overlay{
     visibility: visible;
+    background-image: url('../../Assets/services-images/services-overlay-image.png');
     /* height: 100%; */
+    opacity: 1;
+}
+
+.service-overlay-head{
+    transform: translate(-60%, -200%);
+    transition: all 0.3s ease-in-out;
+}
+
+.service-overlay-head.transit-overlay-head{
+    transform: translate(0%, 0%);
+}
+
+.services-overlay-project-numbers{
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.services-overlay-project-numbers.transit-service-overlay-product-completed{
+    transform: translateX(0%);
     opacity: 1;
 }
 
@@ -57,6 +89,14 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    opacity: 0;
+    transform: translate(-80%, 200%);
+    transition: all 0.3s ease-in-out;
+}
+
+.overlay-servicce-name.transit-service-overlay-name{
+    transform: translate(0%, 0%);
+    opacity: 1;
 }
 
 .overlay-servicce-name p{
@@ -74,13 +114,28 @@
 
 }
 
-.service-poster-borders img{
+.service-poster-borders-1 img{
     position: absolute;
-    top: -40px;
-    right: -60px;
-    width: auto;
+    top: -10px;
+    right: -10px;
+    width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
+}
+
+.service-poster-borders-1.round-borders{
+    border-radius: 10px;
+    border: none !important;
+}
+
+.service-poster-borders-1.round-borders img{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .service-details{

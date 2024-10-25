@@ -65,7 +65,7 @@ const Footer = () => {
                             borderRadius={'10px'}
                             fontSize={'17px'}
                             lineHeight={'25px'}
-                            fontWeight={'600'}
+                            fontWeight={'500'}
                             color={'#fff'}
                             backgroundColor={"transparent"}
                             padding={"0 10px"}
@@ -76,7 +76,7 @@ const Footer = () => {
                             height={'50px'}
                             fontSize={'17px'}
                             lineHeight={'25px'}
-                            fontWeight={'600'}
+                            fontWeight={'500'}
                             color={'#fff'}
                         />
                        </div>

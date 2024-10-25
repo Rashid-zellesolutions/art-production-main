@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+// import {autoplay} from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
@@ -16,10 +17,12 @@ import img2 from "../../Assets/recent-projects/img2.jpg";
 import img3 from "../../Assets/recent-projects/img3.jpg";
 import play from "../../Assets/recent-projects/ei_play.png"
 
+
 // Import required modules
-import { Pagination } from 'swiper/modules';
+import { Autoplay, Pagination } from 'swiper/modules';
 
 export default function RecentProjects() {
+    // SwiperCore.use([autoplay])
     const swiperRef = useRef(null); // Create a ref to access Swiper instance
 
     // Custom navigation functions
@@ -60,6 +63,11 @@ export default function RecentProjects() {
             position: 'MANAGER AL JAZEERA'
         },
     ]
+    // const swiper = new Swiper(".swiper", {
+    //     Autoplay: {
+    //         delay: 3000,
+    //     }
+    // })
 
     return (
         <div style={{
@@ -70,14 +78,20 @@ export default function RecentProjects() {
             </div> */}
             <Swiper
                 ref={swiperRef} // Assign the ref to Swiper
-                spaceBetween={0} // Space between the slides
-                slidesPerView={1.6}
+                spaceBetween={20} // Space between the slides
+                slidesPerView={1.5}
                 centeredSlides={true} // Center the active slide
                 pagination={{
                     clickable: true,
                 }}
-                modules={[Pagination]} // Only use Pagination here since we're using custom buttons
+                loop={true}
+                autoplay={{
+                    delay: 3000,
+                    disableOnInteraction: false
+                }}
+                modules={[Pagination, Autoplay]} // Only use Pagination here since we're using custom buttons
                 className="mySwiper2"
+                
             >
 
                 {

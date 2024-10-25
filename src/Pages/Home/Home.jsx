@@ -17,6 +17,7 @@ import Accordian from '../../GlobalComponents/Accordian';
 import FAQs from '../../GlobalComponents/FAQs';
 import ReadyToAsk from '../../GlobalComponents/ReadyToAsk/ReadyToAsk';
 import OurLocations from '../../GlobalComponents/OurLocations/location';
+import GlideSlder from '../../Components/RecentProjects/GlideSlider';
 
 const Home = () => {
 
@@ -25,6 +26,7 @@ const Home = () => {
     <div>
         <PerformanceCount />
         <RecentProjects/>
+        {/* <GlideSlder /> */}
         <Marquee1/>
         <OurServices />
         <AboutUs/>

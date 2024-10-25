@@ -3,7 +3,7 @@ import './ServiceCard.css';
 import documentaryImage from '../../Assets/services/documentaries.png'
 // import aos from 'aos';
 
-const ServiceCard = ({backgroundColor, projectDone, slideSection, justifyContent, padding, flexDirection, serviceBanner, serviceHeading, serviceHeadingTwo, paraOne, paraTwo}) => {
+const ServiceCard = ({backgroundColor, ind, projectDone, slideSection, justifyContent, padding, flexDirection, serviceBanner, serviceHeading, serviceHeadingTwo, paraOne, paraTwo}) => {
     const [showOverlay, setShowOverlay] = useState(false)
     const handleOveerlayShow = () => {setShowOverlay(true)}
     const handleOverlayHidden = () => {setShowOverlay(false)}
@@ -17,12 +17,13 @@ const ServiceCard = ({backgroundColor, projectDone, slideSection, justifyContent
         }}
     >
         <div className='service-poster' style={{justifyContent: justifyContent, padding: padding}}>
-            <div className='service-poster-borders' onMouseEnter={handleOveerlayShow} onMouseLeave={handleOverlayHidden}>
+            <div className={`service-poster-borders-1 ${ind === 0 || ind === 1 ? 'round-borders' : ''}`} onMouseEnter={handleOveerlayShow} onMouseLeave={handleOverlayHidden}>
                 <img /* onMouseEnter={handleOveerlayShow} onMouseLeave={handleOverlayHidden} */ src={serviceBanner} alt='documentary image'  />
-                <div className={`service-card-image-overlay ${showOverlay ? 'show-overlay' : ''}`}>
-                    <p>We Have Completed</p>
-                    <h3>{projectDone}</h3>
-                    <span className='overlay-servicce-name'>
+                <div className={`service-card-image-overlay ${ind === 0 || ind === 1 ? 'round-overlay' : '' } ${showOverlay ? 'show-overlay' : ''}`}>
+                <div className={`flesh-container ${showOverlay ? 'slide-flash' : ''}`}></div>
+                    <p className={`service-overlay-head ${showOverlay ? 'transit-overlay-head' : ''}`}>We Have Completed</p>
+                    <h3 className={`services-overlay-project-numbers ${showOverlay ? 'transit-service-overlay-product-completed' : ''}`}>{projectDone}</h3>
+                    <span className={`overlay-servicce-name ${showOverlay ? 'transit-service-overlay-name' : ''}`}>
                         <p>{serviceHeading}</p>
                         <p>{serviceHeadingTwo}</p>
                     </span>

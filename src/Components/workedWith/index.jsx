@@ -17,6 +17,10 @@ export default function WorkedWith() {
                     <img src={logo2} alt="" srcset="" />
                     <img src={logo3} alt="" srcset="" />
                     <img src={logo4} alt="" srcset="" />
+                    <img src={logo1} alt="" srcset="" />
+                    <img src={logo2} alt="" srcset="" />
+                    <img src={logo3} alt="" srcset="" />
+                    <img src={logo4} alt="" srcset="" />
                 </div>
             </div>
         </div>

@@ -15,6 +15,7 @@
     font-size: 28px;
     font-weight: bold;
     color: white;
+    
 }
 .rightSection_worked{
     width: 70%;
@@ -25,6 +26,9 @@
     justify-content: flex-start;
     margin: 0 20px;
     box-sizing: border-box;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
 }
 
 .worked_companies{
@@ -32,9 +36,20 @@
     align-items: center;
     justify-content: center;
     gap: 80px;
+    animation: marquee 10s linear infinite;
 }
 
 .worked_companies img{
     width: 160px;
     height: auto;
+    margin-right: 20px;
+}
+
+@keyframes marquee {
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-50%);
+    }
 }

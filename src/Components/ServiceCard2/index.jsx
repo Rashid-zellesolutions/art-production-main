@@ -1,6 +1,7 @@
 import React from "react";
 import "./style.css";
 import PrimeryButton from "../../ControlledComponents/PrimeryButton/PrimeryButton";
+import playBtn from '../../Assets/icons/play-button (1).png'
 
 export default function ServiceCard2() {
     return(
@@ -21,7 +22,7 @@ export default function ServiceCard2() {
                 />
             </div>
             <div className="service-poster-2">
-                .
+                <img src={playBtn} alt="play" className="play-button" />
             </div>
         </div>
     )

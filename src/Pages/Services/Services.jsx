@@ -1,13 +1,14 @@
 import React from 'react'
 import './Services.css'
 import documentaryImage from '../../Assets/services/documentaries.png'
+import interviewImage from '../../Assets/services/interview.png'
 import ServiceCard from '../../Components/ServiceCard/ServiceCard'
 import FAQs from '../../GlobalComponents/FAQs'
 import ReadyToAsk from '../../GlobalComponents/ReadyToAsk/ReadyToAsk'
 
 const Services = () => {
     const servicesData = [
-        {bgColor: 'var(--section-bg)', slide: 'slide-right', padding: '0 0 0 0px', contentJustify: 'start', serviceName: 'Documentaries', img: documentaryImage, paraOne: `Documentaries have the power to educate. Documentary films are an 
+        {bgColor: 'var(--section-bg)', slide: 'slide-right', padding: '0 0 0 0px', contentJustify: 'start', serviceName: 'Documentaries', img: interviewImage, paraOne: `Documentaries have the power to educate. Documentary films are an 
                 in-depth and informative resource that is a perfect platform to create dialogue. 
                 They serve as powerful tools for bringing the important topics to the table in a 
                 captivating way that also sparks conversation, and sometimes even social movements`,
@@ -17,7 +18,7 @@ const Services = () => {
                 detail like video editing and color grading until the film is published, we market 
                 the film on all different platforms on the internet`, projectCount: '60+'
         },
-        {bgColor: 'var(--section-bg-two)',slide: 'slide-left', padding: '0 120px 0 0', contentJustify: 'end', flexDir: 'row-reverse', serviceName: 'Short', serviceNameTwo: 'Films', img: documentaryImage, paraOne: `Documentaries have the power to educate. Documentary films are an 
+        {bgColor: 'var(--section-bg-two)',slide: 'slide-left', padding: '0 120px 0 0', contentJustify: 'end', flexDir: 'row-reverse', serviceName: 'Short', serviceNameTwo: 'Films', img: interviewImage, paraOne: `Documentaries have the power to educate. Documentary films are an 
             in-depth and informative resource that is a perfect platform to create dialogue. 
             They serve as powerful tools for bringing the important topics to the table in a 
             captivating way that also sparks conversation, and sometimes even social movements`, projectCount: '50+'
@@ -119,6 +120,7 @@ const Services = () => {
                 padding={items.padding}
                 slideSection={items.slide}
                 projectDone={items.projectCount}
+                ind={index}
             />
             
         ))}

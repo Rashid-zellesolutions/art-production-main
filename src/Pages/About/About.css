@@ -22,6 +22,66 @@
     line-height: 30px;
 }
 
+.intro_content_right{
+    position: relative;
+    cursor: pointer;
+}
+
+.intro-content-overlay{
+    position: absolute;
+    width: 450px;
+    height: 400px;
+    border-radius: 12px;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    background-image: url('../../Assets/services-images/services-overlay-image.png');
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    visibility: hidden;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.intro-content-overlay.show-intro-overlay{
+    visibility: visible;
+    opacity: 1;
+}
+
+.intro-overlay-hours{
+    color: #57AEE0;
+    font-size: 65px;
+    line-height: 88px;
+    font-weight: 700;
+    transform: translate(-50%, -100%);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+
+}
+
+.intro-overlay-hours.show-intro-hover-hours{
+    transform: translate(0%, 0%);
+    opacity: 1;
+}
+
+.intro-overlay-hover-text{
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 400;
+    color: #fff;
+    transform: translateX(-60%);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.intro-overlay-hover-text.show-intro-overlay-text{
+    opacity: 1;
+    transform: translateX(0%);
+}
+
 .intro_content_right img{
     height: 400px ;
     width: 450px;
