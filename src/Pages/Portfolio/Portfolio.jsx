@@ -5,7 +5,7 @@ import surviveImage from '../../Assets/portfolio/survival-story-image.png'
 import documenteryImage from '../../Assets/portfolio/documentery-image.png'
 import videoGRaphyImage from '../../Assets/portfolio/video-graphy.png';
 import interviewImage from '../../Assets/portfolio/interview.png';
-import ContactForm from '../../Components/ContactForm/ContactForm';
+// import ContactForm from '../../Components/ContactForm/ContactForm';
 import ProductCategories from '../../Components/ProductCategory/ProductCategories';
 import SingleProject from '../../Components/SingleProject/SingleProject';
 import ReadyToAsk from '../../GlobalComponents/ReadyToAsk/ReadyToAsk';

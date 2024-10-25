@@ -23,7 +23,7 @@ const Navbar = () => {
     useEffect(() => {
         const currentIndex = navLinks.findIndex(item => item.link === location.pathname);
         setIsActive(currentIndex !== -1 ? currentIndex : 0); // Default to first item if not found
-    }, [location.pathname]); // Runs every time the pathname changes
+    }, [location.pathname, navLinks]); // Runs every time the pathname changes
 
   return (
     <div className='navbar-main-container'>

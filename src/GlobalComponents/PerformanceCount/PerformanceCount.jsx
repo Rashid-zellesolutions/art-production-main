@@ -14,6 +14,7 @@ const PerformanceCount = () => {
     ];
 
     useEffect(() => {
+        const currentRef = countSectionRef.current;
         const observer = new IntersectionObserver(
             (entries) => {
                 if (entries[0].isIntersecting) {
@@ -24,13 +25,13 @@ const PerformanceCount = () => {
             { threshold: 0.3 } // Trigger when 30% of the component is visible
         );
         
-        if (countSectionRef.current) {
+        if (currentRef) {
             observer.observe(countSectionRef.current);
         }
 
         return () => {
-            if (countSectionRef.current) {
-                observer.unobserve(countSectionRef.current);
+            if (currentRef) {
+                observer.unobserve(currentRef);
             }
         };
     }, []);
