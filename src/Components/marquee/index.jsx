@@ -5,7 +5,7 @@ import MainHeading from "../../GlobalComponents/Utils/mainHeading";
 export default function Marquee1() {
     return (
         <div className="marquee1">
-            <MainHeading margin={"0 0 20px 0"} content1={"Our "} content2={"Highlights"} />
+            <MainHeading width={'95%'} gap={'10px'} flexDirection={'row'} margin={"0 0 20px 0"} content1={"Our "} content2={"Highlights"} />
             <div className="slider_marquee">
                 <div className="video_frame">
                     <video

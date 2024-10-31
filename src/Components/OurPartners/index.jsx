@@ -21,7 +21,7 @@ export default function OurPartners() {
       ];
     return (
         <div className="our_partners">
-            <MainHeading content1={"Our "} content2={"Partners"} />
+            <MainHeading align={'center'} width={'95%'} gap={'10px'} flexDirection={'row'} content1={"Our "} content2={"Partners"} />
             <ShortDescription content={"We’ve had the privilege of partnering with top global brands and television channels, delivering impactful stories that resonate. From documentaries to commercials, our work speaks for itself."} />
             <div className="our_partners_logos">
                 {images.map((image, index) => (

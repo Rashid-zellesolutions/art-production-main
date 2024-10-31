@@ -14,6 +14,7 @@ const Navbar = () => {
         {name: 'About', link: '/about-us'},
         {name: 'Portfolio', link: '/our-projects'},
         {name: 'Services', link: '/services'},
+        // {name: 'Vemeo', link: '/vemeo-videos'},
     ]
     const location = useLocation()
     const navigate = useNavigate()

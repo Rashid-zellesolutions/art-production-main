@@ -53,7 +53,7 @@ const About = () => {
           justifyContent:"center",
           flex:"1"
         }}>
-           <MainHeading content1={"Why Choose Art"} content2={" Productions"} />
+           <MainHeading width={'95%'} gap={'10px'} flexDirection={'row'} content1={"Why Choose Art"} content2={" Productions"} />
            <p>At Art Production®, we’re not just about creating videos—we’re about creating magic. Our award-winning team based in Istanbul has been bringing stories to life since 2004, working with global clients to deliver unforgettable content.</p>
         </div>
 
@@ -80,7 +80,7 @@ const About = () => {
 
 
       <div 
-        className='intro_content' 
+        className='intro_content intro_content-second' 
         style={{
           display:"flex"
         }}

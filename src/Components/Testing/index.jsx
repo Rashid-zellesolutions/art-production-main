@@ -66,7 +66,7 @@ export default function SwiperSlider() {
         <div style={{
             backgroundImage: `url(${bgImgStories})`
         }} className='mySlider'>
-            <MainHeading content1={"Stories That Make "} content2={"Us Smile!"} />
+            <MainHeading width={'95%'} gap={'10px'} flexDirection={'row'} align={'center'} content1={"Stories That Make "} content2={"Us Smile!"} />
             <div onClick={handlePrev} className="swiper-button-prev-cust"><MdArrowBackIos  />
             </div>
             <Swiper

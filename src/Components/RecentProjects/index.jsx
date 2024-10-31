@@ -1,5 +1,6 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import ReactPlayer from 'react-player';
 // import {autoplay} from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -22,18 +23,11 @@ import play from "../../Assets/recent-projects/ei_play.png"
 import { Autoplay, Pagination } from 'swiper/modules';
 
 export default function RecentProjects() {
-    // SwiperCore.use([autoplay])
     const swiperRef = useRef(null); // Create a ref to access Swiper instance
+    const [isModalOpen, setIsModalOpen] = useState(false); // State for modal visibility
+    const [videoUrl, setVideoUrl] = useState('');
+    const [playing, setPlaying] = useState(false);
 
-    // Custom navigation functions
-    // const handleNext = () => {
-    //     swiperRef.current.swiper.slideNext(); // Go to the next slide
-    // };
-
-    // const handlePrev = () => {
-    //     console.log("working")
-    //     swiperRef.current.swiper.slidePrev(); // Go to the previous slide
-    // };
     const storiesData = [
         {
             logo: alJazeeraLogo, 
@@ -42,7 +36,8 @@ export default function RecentProjects() {
                 premise have been very professional and flexible and we always get exactly what 
                 we are looking for, if not more`,
             name: 'Abdo Madkhana', 
-            position: 'MANAGER AL JAZEERA'
+            position: 'MANAGER AL JAZEERA',
+            vimeoId: '759468445'
         },
         {
             logo: alJazeeraLogo, 
@@ -51,7 +46,8 @@ export default function RecentProjects() {
                 premise have been very professional and flexible and we always get exactly what 
                 we are looking for, if not more`,
             name: 'Abdo Madkhana', 
-            position: 'MANAGER AL JAZEERA'
+            position: 'MANAGER AL JAZEERA',
+            vimeoId: '737273982'
         },
         {
             logo: alJazeeraLogo, 
@@ -60,7 +56,8 @@ export default function RecentProjects() {
                 premise have been very professional and flexible and we always get exactly what 
                 we are looking for, if not more`,
             name: 'Abdo Madkhana', 
-            position: 'MANAGER AL JAZEERA'
+            position: 'MANAGER AL JAZEERA',
+            vimeoId: '772986559'
         },
         {
             logo: alJazeeraLogo, 
@@ -69,7 +66,8 @@ export default function RecentProjects() {
                 premise have been very professional and flexible and we always get exactly what 
                 we are looking for, if not more`,
             name: 'Abdo Madkhana', 
-            position: 'MANAGER AL JAZEERA'
+            position: 'MANAGER AL JAZEERA',
+            vimeoId: '737117181'
         },
         // {
         //     logo: alJazeeraLogo, 
@@ -115,13 +113,23 @@ export default function RecentProjects() {
     // }
     // )
 
+    const handleVideoPlay = (vimeoId) => {
+        setVideoUrl(`https://vimeo.com/${vimeoId}`);
+        console.log("Vimeo Link", videoUrl)
+        setIsModalOpen(true);
+        setPlaying(true)
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+        setVideoUrl('');
+        setPlaying(false)
+    };
+
     return (
         <div style={{
-            // backgroundImage: `url(${bgImgStories})`
         }} className='mySlider'>
-           <MainHeading content1={"Recent "} content2={"Projects"} />
-            {/* <div onClick={handlePrev} className="swiper-button-prev-cust"><MdArrowBackIos />
-            </div> */}
+           <MainHeading align={'center'} flexDirection={'row'} gap={'10px'} width={'95%'} content1={"Recent "} content2={"Projects"} />
             <Swiper
                 ref={swiperRef} // Assign the ref to Swiper
                 spaceBetween={5} // Space between the slides
@@ -143,22 +151,25 @@ export default function RecentProjects() {
                 {
                     storiesData.map((item, index) => (
                         <SwiperSlide style={{backgroundImage:`url(${item.bg})`}} className='recentProjectsInnerSlider'>
-                            <img src={play} alt="" />
+                            <img src={play} alt="" onClick={() => handleVideoPlay(item.vimeoId)}/>
                         </SwiperSlide>
                     ))
                 }
-
-
             </Swiper>
-
-            {/* Custom Navigation Buttons */}
-
-
-
-            {/* <div onClick={handleNext} className="swiper-button-next-cust"><MdArrowForwardIos />
-            </div> */}
-
-
+                <div className={`videoModal ${isModalOpen ? 'show-vimeo-video' : ''}`}>
+                    <div className="videoContainer">
+                        
+                        <ReactPlayer 
+                            // url='https://vimeo.com/772986559'
+                            url={videoUrl}
+                            playing={playing} 
+                            controls={true} 
+                            width="100%" 
+                            height="100%"
+                        />
+                        <button className="closeButton" onClick={closeModal}>X</button>
+                    </div>
+                </div>
         </div>
     );
 }

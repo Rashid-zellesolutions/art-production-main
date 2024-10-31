@@ -20,7 +20,7 @@ export default function OurLocations() {
 
     return (
         <div className="our_locations">
-            <MainHeading content1={"Our"} content2={"Locations"} />
+            <MainHeading width={'95%'} align={'center'} gap={'10px'} flexDirection={'row'} content1={"Our"} content2={"Locations"} />
             <div className="map_parent_section">
                 <div className="map">
                     {/* Map section */}

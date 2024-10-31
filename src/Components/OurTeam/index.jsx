@@ -25,7 +25,7 @@ export default function OurTeam() {
       ];
     return (
         <div className="our_team">
-            <MainHeading content1={"Our "} content2={"Team"} />
+            <MainHeading align={'center'} width={'95%'} gap={'10px'} flexDirection={'row'} content1={"Our "} content2={"Team"} />
             <div className="team_members">
                  {
                     team.map(

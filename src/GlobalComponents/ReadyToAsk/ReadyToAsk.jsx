@@ -11,7 +11,7 @@ export default function ReadyToAsk() {
     }
     return(
         <div className="readyToAsk">
-            <MainHeading margin={"0"} content1={"Ready to work "} content2={"with us ?"} />
+            <MainHeading width={'95%'} gap={'10px'} flexDirection={'row'} margin={"0"} content1={"Ready to work "} content2={"with us ?"} />
             <PrimeryButton 
                 text={'Get Started Today'} 
                 width={'280px'} 

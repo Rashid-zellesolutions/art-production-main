@@ -35,3 +35,15 @@
     -webkit-mask-composite: destination-out;
     mask-composite: exclude;
 }
+
+@media only screen and (max-width: 480px){
+    .award {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        padding: 22px 15px;
+        width: 95%;
+    }
+}

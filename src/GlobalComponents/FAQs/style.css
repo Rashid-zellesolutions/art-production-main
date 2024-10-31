@@ -19,13 +19,14 @@
         padding: 20px 30px;
     }
 
-    .mainHeading{
+    /* .mainHeading{
         display: flex;
         flex-direction: column;
         width: 95% !important;
         align-items: center;
         justify-content: center;
-    }
+    } */
+
     .FAQs{
         gap: 10px !important;
     }

@@ -8,7 +8,7 @@ export default function AboutUs() {
     return(
         <div className="aboutUs">
            <div className="leftSection">
-           <MainHeading margin={"0 0 0px 0"} content1={"About "} content2={"Us"} />
+           <MainHeading width={'95%'} gap={'10px'} flexDirection={'row'} margin={"0 0 0px 0"} content1={"About "} content2={"Us"} />
             <p>
             <span>Founded in 2004, Art Production® is an award-winning media production company</span>, dedicated to transforming ideas into impactful stories that inspire and captivate audiences worldwide. We specialize in creating innovative and compelling contentwhether it's documentaries, commercials, or live events—ensuring that every project leaves a lasting impression...
             </p>
