@@ -139,8 +139,19 @@
       /* Darker background on hover */
   }
 
+  .mobile-view-mySlider{
+    display: none;
+    position: relative;
+      /* height: 700px; */
+      background-repeat: no-repeat;
+      background-size: cover;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 0px;
+  }
+
   @media only screen and (max-width: 480px) {
-    
     .innerSliderContent {
           font-size: 12px;
           height: 170px;
@@ -194,12 +205,13 @@
           left: 0;
           width: 100%;
       }
-      /* .swiper-wrapper {
-            transition-duration: 0ms !important;
-            transition-delay: 0ms !important;
-            transform: translate3d(-418.938px, 0px, 0px) !important;
-        } */
-    /* .swiper-slide{
-        width: 100% !important;
-    } */
+      .mySlider{
+        display: none;
+      }
+      .mobile-view-mySlider{
+            display: flex;
+        }
+    /* .swiper-button-prev-cust,
+    .swiper-button-next-cust{display: none;} */
+    
   }

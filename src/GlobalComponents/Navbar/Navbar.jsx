@@ -8,6 +8,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
     const [isActive, setIsActive] = useState(0)
+    const [navOpen, setNavOpen] = useState(false);
     const handleNavActive = (index) => {setIsActive(index)}
     const navLinks = [
         {name: 'Home', link: '/'},
@@ -26,6 +27,12 @@ const Navbar = () => {
         setIsActive(currentIndex !== -1 ? currentIndex : 0); // Default to first item if not found
     }, [location.pathname, navLinks]); // Runs every time the pathname changes
 
+    const handleNavOpen = () => {
+        setNavOpen(true)
+    }
+    const handleNavClose = () => {
+        setNavOpen(false)
+    }
   return (
     <div className='navbar-main-container'>
         <div className='navbar-inner-container'>
@@ -60,7 +67,7 @@ const Navbar = () => {
         </div>
         <div className='mobile-navbar-inner-container'>
             <img src={logo} alt='main logo' className='mobile-main-logo' />
-            <img src={humbergerIcon} alt='nav-toggle' className='mobile-humberger-icon' />
+            <img src={humbergerIcon} alt='nav-toggle' className='mobile-humberger-icon' onClick={handleNavActive} />
         </div>
     </div>
   )

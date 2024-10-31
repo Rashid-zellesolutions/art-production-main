@@ -14,20 +14,33 @@ import { MdArrowBackIos  } from "react-icons/md";
 
 
 // Import required modules
-import { Pagination } from 'swiper/modules';
+import { Pagination, Autoplay } from 'swiper/modules';
 
 export default function SwiperSlider() {
-    const swiperRef = useRef(null); // Create a ref to access Swiper instance
+    const desktopSwiperRef = useRef(null); // Create a ref to access Swiper instance
+    const mobileRef = useRef(null);
 
     // Custom navigation functions
-    const handleNext = () => {
-        swiperRef.current.swiper.slideNext(); // Go to the next slide
+    // const handleNext = () => {
+    //     swiperRef.current.swiper.slideNext(); // Go to the next slide
+    // };
+
+    // const handlePrev = () => {
+    //     console.log("working")
+    //     swiperRef.current.swiper.slidePrev(); // Go to the previous slide
+    // };
+       const handleNext = () => {
+        if (desktopSwiperRef.current) {
+            desktopSwiperRef.current.swiper.slideNext(); // Go to the next slide
+        }
     };
 
     const handlePrev = () => {
-        console.log("working")
-        swiperRef.current.swiper.slidePrev(); // Go to the previous slide
+        if (desktopSwiperRef.current) {
+            desktopSwiperRef.current.swiper.slidePrev(); // Go to the previous slide
+        }
     };
+    
     const storiesData = [
         {
             logo: alJazeeraLogo, post: `The teams that worked on our projects on location and in 
@@ -63,6 +76,7 @@ export default function SwiperSlider() {
     ]
 
     return (
+        <>
         <div style={{
             backgroundImage: `url(${bgImgStories})`
         }} className='mySlider'>
@@ -70,7 +84,7 @@ export default function SwiperSlider() {
             <div onClick={handlePrev} className="swiper-button-prev-cust"><MdArrowBackIos  />
             </div>
             <Swiper
-                ref={swiperRef} // Assign the ref to Swiper
+                ref={desktopSwiperRef} // Assign the ref to Swiper
                 spaceBetween={5} // Space between the slides
                 slidesPerView={1.6} // Show 1 full slide and part of the next and previous ones
                 initialSlide={1}
@@ -108,5 +122,56 @@ export default function SwiperSlider() {
 
 
         </div>
+
+        <div style={{
+            backgroundImage: `url(${bgImgStories})`
+        }} className='mobile-view-mySlider'>
+            <MainHeading width={'95%'} gap={'10px'} flexDirection={'row'} align={'center'} content1={"Stories That Make "} content2={"Us Smile!"} />
+            {/* <div onClick={handlePrev} className="swiper-button-prev-cust"><MdArrowBackIos  />
+            </div> */}
+            <Swiper
+                ref={mobileRef} 
+                spaceBetween={5} // Space between the slides
+                slidesPerView={1.2} // Show 1 full slide and part of the next and previous ones
+                initialSlide={1}
+                loop={true}
+                centeredSlides={true} // Center the active slide
+                pagination={{
+                    clickable: true,
+                }}
+                autoplay={{
+                    delay: 3000, // 3 seconds delay
+                    disableOnInteraction: false, // Continue autoplay even after user interactions
+                }}
+                modules={[Pagination, Autoplay]} // Only use Pagination here since we're using custom buttons
+                className="mySwiper"
+            >
+
+                {
+                    storiesData.map((item, index) => (
+                        <SwiperSlide className='innerSliderContent'>
+                            <img src={item.logo} alt='logo' />
+                            <p>{item.post}</p>
+                            <div>
+                                <h3>{item.name}</h3>
+                                <h4>{item.position}</h4>
+                            </div>
+                        </SwiperSlide>
+                    ))
+                }
+
+
+            </Swiper>
+
+            {/* Custom Navigation Buttons */}
+
+
+
+            {/* <div onClick={handleNext} className="swiper-button-next-cust"><MdArrowForwardIos />
+            </div> */}
+
+
+        </div>
+        </>
     );
 }
